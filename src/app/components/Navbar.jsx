@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   {
@@ -16,11 +14,11 @@ const navLinks = [
   },
   {
     title: "Education",
-    path: "#education",  // Add a new path if it's a section on the same page or "/education" if it's a separate page
+    path: "#education",
   },
   {
     title: "Skills",
-    path: "#skills",  // Similarly, add a new path as per your routing structure
+    path: "#skills",
   },
   {
     title: "Contact",
@@ -32,42 +30,70 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
+    <nav className="fixed top-0 left-0 right-0 z-10 ">
+      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        {/* G Portfolio - Adjust the margins to move more to the corner */}
+        <Link href="/" className="text-3xl text-[#42325b] font-bold mr-auto pl-2">
           G Portfolio
         </Link>
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
+        <div className="block md:hidden">
+          <button onClick={() => setNavbarOpen(!navbarOpen)} className="text-3xl p-3 rounded">
+            {navbarOpen ? <XMarkIcon className="h-8 w-8 text-[#42325b]" /> : <Bars3Icon className="h-8 w-8 text-[#42325b]" />}
+          </button>
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+        {/* Menu Items - Adjust padding and margin to move closer to the corner */}
+        <div className={`hidden md:flex ${navbarOpen ? "flex" : "hidden"} ml-auto pr-2`}>
+          <ul className="flex flex-col md:flex-row md:space-x-12 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <a
+                  href={link.path}
+                  className="text-[#42325b] px-3 py-2 rounded-lg font-semibold hover:bg-[#7c6a99]/50 transition-transform duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const section = document.querySelector(link.path);
+                    window.scrollTo({
+                      top: section.offsetTop - document.querySelector("nav").offsetHeight,
+                      behavior: 'smooth'
+                    });
+                    setNavbarOpen(false);
+                  }}
+                >
+                  {link.title}
+                </a>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 shadow-lg">
+          <ul className="flex flex-col">
+            {navLinks.map((link, index) => (
+              <li key={index} className="w-full">
+                <a
+                  href={link.path}
+                  className="block text-center text-[#42325b] py-2 rounded font-semibold transition-transform duration-300 hover:bg-[#7c6a99]/50"
+                  style={{ transform: "scale(1)" }}
+          onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.05)"}
+          onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const section = document.querySelector(link.path);
+                    window.scrollTo({
+                      top: section.offsetTop - document.querySelector("nav").offsetHeight,
+                      behavior: 'smooth'
+                    });
+                    setNavbarOpen(false);
+                  }}
+                >
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

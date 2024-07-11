@@ -2,45 +2,37 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { motion } from "framer-motion";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "Domain",
+    id: "Domain",
     content: (
       <ul className="list-disc pl-2">
-      <li>Machine Learning: Transformers, TensorFlow, scikit-learn, NLP, LLM, RAG</li>
-      <li>Data Analysis & Tools: Pandas, NumPy, Matplotlib, seaborn, NEO.4J, Pinecone, SciPy, Excel</li>
-      <li>Programming: Python, SQL, Flask, Django, C, HTML, CSS, Verilog</li>
-      <li>Software & Tools: Linux, MATLAB, Jira, Git</li>
-      <li>Methodologies: Agile, Scrum, Continuous Improvement, Project Management, Data Pipelines</li>
-    </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
-        <ul className="list-disc pl-2">
-        <li>Master of Engineering – Electrical and Computer, Concordia University, Montreal, Quebec, Canada</li>
-        <li>Bachelor of Engineering - Electronics and Communication, SRM Institute of Science and Technology, Chennai, India</li>
+        <li>Machine Learning</li>
+        <li>Data Engineering</li>
+        <li>Web Development</li>
+        <li>Cloud Engineer</li>
       </ul>
     ),
   },
+  
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Interests",
+    id: "Interests",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Strength Training</li>
+        <li>Hiking</li>
+        <li>Anime</li>
       </ul>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("Domain");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -50,43 +42,40 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
-       
+    <section className="text-[#42325b] pt-24 mb-20 mt-20" id="about">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 bg-white bg-opacity-60 rounded-lg shadow-lg">
+        <motion.div
+          className="overflow-hidden rounded-lg mb-8 md:mb-0"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Image
+            src="/images/about-image.jpg"
+            width={450}
+            height={450}
+            className="rounded-lg shadow-lg"
+            alt="About Image"
+          />
+        </motion.div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-         
-          <h2 className="text-4xl font-bold text-white mb-4">
-          About Me
-          </h2>
-          
-          <p className="text-base lg:text-lg">
+          <h2 className="text-4xl font-bold text-[#42325b] mb-4">About Me</h2>
+          <p className="text-[#6d5d87] lg:text-lg">
             I am a graduate research student at Concordia University specializing in LLM-based root cause analysis. My research focuses on enhancing system reliability within AWS microservices using advanced ML models and data processing techniques. I am experienced in machine learning, data analysis, and software development, employing rigorous methodologies like Agile and Scrum in project management.
           </p>
-          
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start flex-wrap mt-8 space-x-4">
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("Domain")}
+              active={tab === "Domain"}
             >
-              {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
-            >
-              {" "}
-              Education{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
+              Domain
             </TabButton>
             
+            <TabButton
+              selectTab={() => handleTabChange("Interests")}
+              active={tab === "Interests"}
+            >
+              Interests
+            </TabButton>
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
