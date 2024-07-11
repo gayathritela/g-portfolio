@@ -17,7 +17,6 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
       method: "POST",
       headers: {
@@ -38,7 +37,7 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 gap-4 py-12 mt-32 mb-24 my-24 relative  bg-white bg-opacity-60  text-[#42325b] rounded-lg shadow-lg px-5 md:px-12"
+      className="grid md:grid-cols-2 gap-4 py-12 mt-32 mb-24 relative bg-white bg-opacity-60 text-[#42325b] rounded-lg shadow-lg px-5 md:px-12"
     >
       <div className="p-5 md:p-12">
         <h5 className="text-3xl font-bold text-[#42325b] my-2">
