@@ -23,8 +23,5 @@ body {
   background: rgb(var(--background-rgb)); /* White background consistently */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance; /* Note: `text-wrap: balance;` is not a standard CSS property */
-  }
-}
+
+

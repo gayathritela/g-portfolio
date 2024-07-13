@@ -50,7 +50,7 @@ const AboutSection = () => {
           transition={{ duration: 0.3 }}
         >
           <Image
-            src="/images/about-image.jpg"
+            src="/g-about.jpg"
             width={450}
             height={450}
             className="rounded-lg shadow-lg"
