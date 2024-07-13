@@ -14,25 +14,26 @@ const HeroSection = () => {
         className="text-center mt-20" // Top margin to position text properly
       >
         <h1 className="text-3xl text-[#563e7b] sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
-  Hello, I&apos;m{" "}
-  <br/>
-  <TypeAnimation
-    sequence={[
-      'Gayathiri Elambooranan', 2000,
-      'Machine Learning Engineer', 2000,
-      'Data Engineer', 2000,
-      'Full Stack Developer', 2000,
-      '', // Loop back to start
-    ]}
-    wrapper="span"
-    cursor={true}
-    repeat={Infinity}
-    speed={30}
-  />
-</h1>
-<p className='text-md lg:text-2xl text-[#563e7b] mb-40'>
-  "The universe falls in love with a stubborn heart!"
-</p>
+          Hello, I&apos;m{" "}
+          <br/>
+          <TypeAnimation
+            sequence={[
+              'Gayathiri Elambooranan', 2000,
+              'Machine Learning Engineer', 2000,
+              'Data Engineer', 2000,
+              'Full Stack Developer', 2000,
+              '', // Loop back to start
+            ]}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+            speed={30}
+          />
+        </h1>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
+        <p className='text-md lg:text-2xl text-[#563e7b] mb-40'>
+          "The universe falls in love with a stubborn heart!"
+        </p>
       </motion.div>
 
       {/* Button Container, placed below text with less margin */}
