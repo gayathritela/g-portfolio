@@ -36,7 +36,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Button Container, placed below text with less margin */}
-      <div className="mt-50 flex justify-center items-center">
+      <div className="mt-10 flex justify-center items-center"> 
         <Link
           href="/#contact"
           className="px-6 py-3 rounded-lg bg-gray-800 hover:bg-slate-800 text-purple-200 transition duration-300 ease-in-out mx-2"
