@@ -32,7 +32,8 @@ const HeroSection = () => {
         </h1>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className='text-md lg:text-2xl text-[#563e7b] mb-40'>
-          "The universe falls in love with a stubborn heart!"
+        &quot;The universe falls in love with a stubborn heart!&quot;
+
         </p>
       </motion.div>
 
