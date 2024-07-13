@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from 'react-icons/fa'; 
 import Link from "next/link";
@@ -17,7 +16,6 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
-    // Form the request for sending data to the server.
     const options = {
       method: "POST",
       headers: {
@@ -38,7 +36,7 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 gap-4 py-12 mt-32 mb-24 my-24 relative  bg-white bg-opacity-60  text-[#42325b] rounded-lg shadow-lg px-5 md:px-12"
+      className="grid md:grid-cols-2 gap-4 py-12 mt-32 mb-24 relative bg-white bg-opacity-60 text-[#42325b] rounded-lg shadow-lg px-5 md:px-12"
     >
       <div className="p-5 md:p-12">
         <h5 className="text-3xl font-bold text-[#42325b] my-2">
@@ -49,15 +47,11 @@ const EmailSection = () => {
           Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
         <div className="flex flex-row gap-2">
-          <Link href="https://github.com/gayathritela">
-            <div className="text-3xl text-[#42325b] hover:text-black cursor-pointer">
-              <FaGithub />
-            </div>
+          <Link href="https://github.com/gayathritela" className="text-3xl text-[#42325b] hover:text-black cursor-pointer">
+            <FaGithub />
           </Link>
-          <Link href="https://www.linkedin.com/in/gayathiri-elambooranan/">
-            <div className="text-3xl text-[#7c6a99] hover:text-blue-900 cursor-pointer">
-              <FaLinkedin />
-            </div>
+          <Link href="https://www.linkedin.com/in/gayathiri-elambooranan/" className="text-3xl text-[#7c6a99] hover:text-blue-900 cursor-pointer">
+            <FaLinkedin />
           </Link>
         </div>
       </div>

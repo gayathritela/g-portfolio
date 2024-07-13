@@ -66,7 +66,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 mt-12 mb-12">
+    <section id="projects" className="py-6 mt-8 mb-12">
       <h2 className="text-center text-4xl font-bold text-[#42325b] mt-4 mb-8 md:mb-12">
         Projects
       </h2>

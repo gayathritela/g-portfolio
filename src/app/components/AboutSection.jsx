@@ -24,7 +24,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Strength Training</li>
-        <li>Hiking</li>
+        <li>Photography</li>
         <li>Anime</li>
       </ul>
     ),
@@ -42,7 +42,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-[#42325b] pt-24 mb-20 mt-20" id="about">
+    <section className="text-[#42325b] pt-12 mb-20 mt-12" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 bg-white bg-opacity-60 rounded-lg shadow-lg">
         <motion.div
           className="overflow-hidden rounded-lg mb-8 md:mb-0"

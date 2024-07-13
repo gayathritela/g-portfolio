@@ -13,20 +13,16 @@ const HeroSection = () => {
         transition={{ duration: 0.2 }}
         className="text-center mt-20" // Top margin to position text properly
       >
-        <h1 className="text-3xl text-[#563e7b] sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight"
-        > Hello, I&apos;m{" "}
-          <br></br>
+        <h1 className="text-3xl text-[#563e7b] sm:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
+          Hello, I&apos;m{" "}
+          <br/>
           <TypeAnimation
             sequence={[
-              'Gayathiri Elambooranan',
-              2000,
-              'Machine Learning Engineer',
-              2000,
-              'Data Engineer',
-              2000,
-              'Developer',
-              2000,
-              , // Loop back to start
+              'Gayathiri Elambooranan', 2000,
+              'Machine Learning Engineer', 2000,
+              'Data Engineer', 2000,
+              'Full Stack Developer', 2000,
+              '', // Loop back to start
             ]}
             wrapper="span"
             cursor={true}
@@ -34,13 +30,13 @@ const HeroSection = () => {
             speed={30}
           />
         </h1>
-        <p className='text-md lg:text-2xl text-[#563e7b] mb-40 '>
+        <p className='text-md lg:text-2xl text-[#563e7b] mb-40'>
           "The universe falls in love with a stubborn heart!"
         </p>
       </motion.div>
 
       {/* Button Container, placed below text with less margin */}
-      <div className="mt-50 flex justify-center items-center"> 
+      <div className="mt-50 flex justify-center items-center">
         <Link
           href="/#contact"
           className="px-6 py-3 rounded-lg bg-gray-800 hover:bg-slate-800 text-purple-200 transition duration-300 ease-in-out mx-2"

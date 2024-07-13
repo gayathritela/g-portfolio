@@ -12,6 +12,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import ParticlesBackground from "./components/ParticlesBackground";
 
+
 function useScrollCorrection() {
   useEffect(() => {
     const correctScroll = () => {
@@ -54,9 +55,10 @@ export default function Home() {
             objectPosition="center"
             priority  // Ensures the image is loaded with high priority
           />
+          <ParticlesBackground />
         </div>
-
-      <Navbar onAboutClick={undefined} />
+      
+      <Navbar  />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
         <AboutSection />
