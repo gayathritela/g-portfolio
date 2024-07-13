@@ -9,7 +9,7 @@ const projectsData = [
     title: "LLM-Based Root Cause Analysis in AWS Microservices",
     description: "Leveraging large language models, this project focused on conducting in-depth root cause analysis within AWS microservices. It highlighted the application of machine learning techniques to enhance cloud service reliability and diagnostic capabilities.",
     image: "/images/projects/llm.project.png",
-    gitUrl: "/",
+    gitUrl: "https://github.com/gayathritela/RCA-of-Cloud-Microservices/tree/main",
     previewUrl: "/",
   },
   {
@@ -17,7 +17,7 @@ const projectsData = [
     title: "Portfolio Website Design",
     description: "This personal portfolio website showcases my skills, projects, and professional experience through a responsive design with dynamic animations. Built with React.js, Next.js, and Tailwind CSS, it includes sections for education, projects, and contact information.",
     image: "/images/projects/portfolio.png",
-    gitUrl: "/",
+    gitUrl: "https://github.com/gayathritela/g-portfolio",
     previewUrl: "/",
   },
   {
@@ -25,7 +25,7 @@ const projectsData = [
     title: "Content Delivery Network Design and Implementation",
     description: "This project developed a CDN to streamline video streaming processes, incorporating HTTP/2 for enhanced data transmission. A round-robin algorithm was utilized for effective load balancing across multiple servers, improving resource efficiency and user experience.",
     image: "/images/projects/cnn.png",
-    gitUrl: "/",
+    gitUrl: "https://github.com/gayathritela/Content-Delivery-Network-Design-and-Implementation",
     previewUrl: "/",
   },
   {
