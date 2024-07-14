@@ -61,4 +61,3 @@ Contributions are welcome! If you have a feature request, bug report, or patch, 
 This project is open-sourced under the MIT license.
 ```
 
-This version ensures that the markdown doesn't break in the formatting for GitHub's README file view. Copy and paste it directly into your GitHub repository.
