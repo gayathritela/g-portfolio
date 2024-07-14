@@ -59,5 +59,4 @@ Contributions are welcome! If you have a feature request, bug report, or patch, 
 ## License
 
 This project is open-sourced under the MIT license.
-```
 
