@@ -57,7 +57,7 @@ export default function Home() {
           />
           
         </div>
-      
+      <ParticlesBackground />
       <Navbar  />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
@@ -65,7 +65,6 @@ export default function Home() {
         <EducationSection />
         <ProjectsSection />
         <SkillsSection />
-        
         <EmailSection />
       </div>
       <Footer />
