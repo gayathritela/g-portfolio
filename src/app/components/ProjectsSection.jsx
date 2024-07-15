@@ -43,7 +43,7 @@ const projectsData = [
     title: "Fusion Routing Algorithm",
     description: "This project developed a novel routing algorithm to enhance network efficiency. The focus was on creating a versatile routing framework that could adapt to both aerial and terrestrial networking environments, significantly improving data flow and reducing latency.",
     image: "/images/projects/aerial.png",
-    gitUrl: "/",
+    gitUrl: "https://www.ijirt.org/master/publishedpaper/IJIRT151458_PAPER.pdf",
     previewUrl: "/",
   },
   {
